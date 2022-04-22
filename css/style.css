@@ -1,0 +1,281 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 90%;
+  margin: 0 auto 150px;
+}
+
+.navbar {
+  margin: 30px auto;
+  display: flex;
+  align-items: center;
+}
+
+.links {
+  flex: 0.98;
+  text-align: right;
+}
+
+.links li {
+  display: inline-block;
+  list-style: none;
+}
+
+.logo {
+  width: 100%;
+  max-width: 200px;
+  margin-left: 35px;
+}
+
+.links .nav-links a {
+  text-decoration: none;
+  color: #000;
+  padding: 0 10px;
+  position: relative;
+}
+
+.links .nav-links a::after {
+  content: "";
+  width: 0;
+  height: 10px;
+  background-color: #f14a60;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -20px;
+  transition: 0.5s;
+}
+
+.links .nav-links a:hover::after {
+  width: 100%;
+}
+
+.navbar-icons img {
+  height: 25px;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.hero-sec {
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  padding: 50px 100px;
+  display: flex;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content .textbox {
+  position: relative;
+  max-width: 600px;
+  transform: translateY(-20%);
+}
+
+.content .textbox p {
+  font-size: 1.4rem;
+  width: 100%;
+  max-width: 550px;
+  line-height: 1.6;
+}
+
+.content .textbox h2 {
+  font-size: 4em;
+  line-height: 1.5;
+  font-weight: 900;
+}
+
+.content .textbox h2 span {
+  color: #f14a60;
+}
+
+.content .textbox a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #f14a60;
+  color: #fff;
+  border-radius: 40px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.content .imgBox {
+  display: flex;
+  padding-right: 50px;
+  margin-top: -70px;
+  justify-content: flex-end;
+}
+
+.content .bg-img-1 {
+  width: 100%;
+  max-width: 600px;
+  margin-right: -135px;
+  border-radius: 10px;
+}
+
+.thumb {
+  position: absolute;
+  left: 50%;
+  bottom: 3%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.thumb li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.thumb li:hover {
+  transform: translateY(-15px);
+}
+
+.thumb li img {
+  max-width: 40px;
+}
+
+/* our-services */
+
+.our-service {
+  background-color: #eef8ff;
+  width: 100%;
+  overflow: hidden;
+}
+
+.our-service .carousel {
+  width: 300px;
+  margin: 100px auto 0;
+  overflow: visible;
+}
+
+.our-service .carousel li {
+  list-style: none;
+}
+
+.our-service a {
+  text-decoration: none;
+  list-style: none;
+}
+
+.box {
+  width: 300px;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slide-img {
+  height: 450px;
+  position: relative;
+}
+
+.slide-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.details-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.type {
+  display: flex;
+  flex-direction: column;
+}
+
+.type a {
+  color: #222222;
+  margin: 5px 6px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding-right: 8px;
+}
+
+.type span {
+  color: rgba(26, 26, 26, 0.5);
+  margin: 0 6px;
+}
+
+.price {
+  color: #333333;
+  font-weight: 600;
+  font-family: poppins;
+  letter-spacing: 0.5px;
+}
+
+.overlay {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(922, 95, 236, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.email-btn {
+  width: 160px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  color: #252525;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  border-radius: 20px;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+}
+
+.email-btn:hover {
+  color: #ffffff;
+  background-color: #f15fa3;
+  transition: all ease 0.3s;
+}
+
+.overlay {
+  visibility: hidden;
+}
+
+.slide-img:hover .overlay {
+  visibility: visible;
+  animation: fade 0.5s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
