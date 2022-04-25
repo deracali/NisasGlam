@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/images/logo-2.jpg" rel="shortcut icon" sizes="32*32" />
+    <title>Nisas Glam</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body class="form-body">
+    <div class="navbar" id="navbar">
+      <a href="/index.html"><img class="logo" src="/images/logo.png.png" /></a>
+      <ul class="links">
+        <li class="nav-links"><a href="#">Home</a></li>
+        <li class="nav-links"><a href="#">About</a></li>
+        <li class="nav-links"><a href="#">Contact</a></li>
+      </ul>
+      <div class="navbar-icons">
+        <a href="/form.html"><img src="/images/user.png" /></a>
+        <img
+          class="toggleMenu"
+          src="/images/menu.png"
+          onclick="menuToggle();"
+        />
+      </div>
+    </div>
+    <div class="container">
+      <form id="form1">
+        <h3>BOOK A SECTION</h3>
+        <input type="text" placeholder="Full Name" required />
+        <input type="text" placeholder="Mobile No." required />
+        <input type="text" placeholder="Enter Text" required />
+
+        <div class="btn-box">
+          <a href="/index.html"><button type="button">Back</button></a>
+          <button class="send" type="button">Send</button>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      let send = document.querySelector(".send");
+
+      send.addEventListener("click", () => {
+        send.innerText = "sending...";
+
+        setTimeout(function () {
+          send.style.backgroundColor = "#fff";
+          send.style.color = "#000";
+          send.style.border = "1px solid #000";
+          send.innerText = "Sent";
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>
