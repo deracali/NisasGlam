@@ -14,7 +14,8 @@
     <link href="css/style.css" rel="stylesheet" type="text/css" />
   </head>
 
-  <body class="form-body">
+  <body onload="myFunction()" class="form-body">
+    <div id="loading"></div>
     <div class="navbar" id="navbar">
       <a href="/index.html"><img class="logo" src="/images/logo.png.png" /></a>
       <ul class="links">
@@ -34,9 +35,10 @@
     <div class="container">
       <form id="form1">
         <h3>BOOK A SECTION</h3>
-        <input type="text" placeholder="Full Name" required />
-        <input type="text" placeholder="Mobile No." required />
-        <input type="text" placeholder="Enter Text" required />
+        <input type="text" placeholder="Full Name" required id="fullname" />
+        <input type="text" placeholder="Mobile No." required id="mobile" />
+        <input type="text" placeholder="Email" required id="email" />
+        <input type="text" placeholder="Enter Text" required id="text" />
 
         <div class="btn-box">
           <a href="/index.html"><button type="button">Back</button></a>
@@ -46,6 +48,13 @@
     </div>
 
     <script>
+      let preloader = document.getElementById("loading");
+      function myFunction() {
+        setTimeout(() => {
+          preloader.style.display = "none";
+        }, 1000);
+      }
+
       let send = document.querySelector(".send");
 
       send.addEventListener("click", () => {
