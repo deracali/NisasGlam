@@ -1,0 +1,65 @@
+.features-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-bottom: 5.4rem;
+  padding-top: 35px;
+
+  @include respond(tab-port) {
+    flex-wrap: wrap;
+    width: 70%;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 150px;
+  }
+
+  @include respond(tab-view) {
+    margin-left: 125px;
+  }
+
+  @include respond(phone) {
+    margin-left: 92px;
+  }
+  @include respond(phone-medium) {
+    margin-left: 65px;
+  }
+}
+
+.features img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2.4rem;
+  height: 300px;
+  object-fit: cover;
+}
+
+.features a {
+  text-decoration: none;
+  width: 170px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  color: #252525;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0 auto;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+}
+
+.features-box:nth-child(1) {
+  @include respond(tab-view) {
+    margin-bottom: 50px;
+  }
+}
+
+.features-box:nth-child(3) {
+  @include respond(tab-port) {
+    margin-top: 60px;
+  }
+}

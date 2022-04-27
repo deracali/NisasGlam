@@ -1,0 +1,39 @@
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 50px;
+
+  @include respond(tab-view) {
+    flex-wrap: wrap;
+    width: 80%;
+    margin: -10px 60px 60px;
+  }
+}
+
+.phone {
+  margin-bottom: 1.4rem;
+}
+
+.footer-contact {
+  @include respond(phone) {
+    margin-bottom: 1.4rem;
+  }
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.copyright {
+  text-align: center;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}

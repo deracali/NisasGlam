@@ -33,7 +33,7 @@
       </div>
     </div>
     <div class="container">
-      <form id="form1">
+      <form id="form1" onsubmit="sendEmail(); reset();">
         <h3>BOOK A SECTION</h3>
         <input type="text" placeholder="Full Name" required id="fullname" />
         <input type="text" placeholder="Mobile No." required id="mobile" />
@@ -67,6 +67,21 @@
           send.innerText = "Sent";
         }, 1000);
       });
+    </script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+            function sendEmail(){
+              Email.send({
+          Host : "smtp.gmail.com",
+          Username : "chideracalistus@gmail.com",
+          Password : "ECONOMIC000",
+          To : 'chideracalistus00@gmail.com',
+          From : document.getElementById('email').value,
+          Subject : "New Customer",
+          Body : "And this is the body"
+      }).then(
+        message => alert(message)
+      );
+            }
     </script>
   </body>
 </html>

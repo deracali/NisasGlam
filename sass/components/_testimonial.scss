@@ -1,0 +1,117 @@
+.testimonial-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1020px;
+  padding: 40px 20px;
+  margin: auto;
+}
+
+.testimonial-section .arrow {
+  display: block;
+  position: absolute;
+  color: #eee;
+  cursor: pointer;
+  font-size: 2em;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease-in-out;
+  padding: 5px;
+  z-index: 22222222;
+
+  @include respond(phone-medium){
+     font-size: 1.5rem;
+  }
+}
+
+.testimonial-section .arrow::before {
+  cursor: pointer;
+}
+
+.testimonial-section .arrow.left {
+  left: 10px;
+}
+
+.testimonial-section .arrow.right {
+  right: 10px;
+}
+.testimonial-section .arrow:hover {
+  color: #ea830e;
+}
+
+.testimonial-section .dots {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  bottom: 60px;
+  left: 0;
+  display: block;
+  z-index: 3333;
+  height: 12px;
+}
+
+.testimonial-section .dots .dot {
+  list-style-type: none;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #eee;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+
+.testimonial-section .dots .dot.active,
+.testimonial-section .dots .dot:hover {
+  background: #ea830e;
+  border-color: #ea830e;
+}
+
+.testimonial-section .dots .dot.active {
+  animation: testimonial-scale 0.5s ease-in-out forwards;
+}
+
+.testimonial-section .cont {
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-section .cont > div {
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 0 70px 0;
+  opacity: 0;
+}
+
+/* .testimonial-section .cont > div.inactive {
+  opacity: 1;
+} */
+.testimonial-section .cont > div.active {
+  opacity: 1;
+  position: relative;
+}
+
+.testimonial-section .cont div .img img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.up {
+  font-size: 52px;
+  display: flex;
+  justify-content: end;
+  align-items: baseline;
+  cursor: pointer;
+}
+
+.scroll-link {
+  text-decoration: none;
+  color: #fff;
+}

@@ -1,0 +1,27 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  scroll-behavior: smooth;
+
+  @include respond(phone-small) {
+    font-size: 14px;
+  }
+}
+
+#loading {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #fff url(/images/logo.png.png) no-repeat center;
+  z-index: 99999;
+
+  @include respond(tab-view) {
+    background-size: 300px;
+  }
+}

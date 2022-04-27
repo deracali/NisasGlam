@@ -1,0 +1,154 @@
+.content .textbox {
+  position: relative;
+  max-width: 600px;
+  transform: translateY(-20%);
+
+  @include respond(tab) {
+    transform: translateY(-12%);
+  }
+
+  @include respond(tab-port) {
+    position: relative;
+    max-width: 100%;
+    padding-right: 20px;
+  }
+
+  @include respond(phone) {
+    text-align: center;
+    transform: translateY(-7%);
+  }
+  @include respond(phone-vp) {
+    transform: translateY(-1%);
+  }
+}
+
+.content .textbox p {
+  font-size: 1.4rem;
+  width: 100%;
+  max-width: 550px;
+  line-height: 1.6;
+  color: gray;
+
+  @include respond(tab-land) {
+    font-size: 1.2rem;
+    max-width: 587px;
+  }
+
+  @include respond(tab-port) {
+    margin-bottom: 1.4rem;
+    font-size: 1.4rem;
+  }
+
+  @include respond(phone) {
+    max-width: 100%;
+  }
+  @include respond(phone-vp) {
+    font-size: 1.2rem;
+  }
+}
+
+.content .textbox h2 {
+  font-size: 4em;
+  line-height: 1.5;
+  font-weight: 900;
+
+  @include respond(tab-port) {
+    font-size: 3em;
+    margin-bottom: 1.4rem;
+  }
+}
+
+.content .textbox h2 span {
+  color: #f14a60;
+}
+
+.features h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.features h3 {
+  margin-bottom: 1.2rem;
+  font-size: 1.8rem;
+}
+
+.features h3 span {
+  color: #f14a60;
+}
+
+.features p {
+  width: 100%;
+  max-width: 285px;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: gray;
+}
+
+.testimonial-section h2 {
+  text-align: center;
+  font-size: 4rem;
+  color: gray;
+  margin-bottom: 2rem;
+
+  @include respond(phone-vp) {
+    font-size: 3rem;
+  }
+}
+
+.testimonial-section .cont div h2 {
+  color: #ea830e;
+  font-size: 1em;
+  margin: 25px 0;
+}
+
+.testimonial-section .cont div p {
+  font-size: 1.6em;
+  width: 80%;
+  margin: auto;
+  color: gray;
+
+  @include respond(phone-medium) {
+    line-height: 25px;
+    font-size: 1.4em;
+  }
+  @include respond(phone-vp) {
+    font-size: 1.2em;
+  }
+}
+
+.footer-text {
+  width: 100%;
+  max-width: 400px;
+}
+
+footer .footer-h2 {
+  font-size: 4em;
+  line-height: 1.5;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 2.4rem;
+
+  @include respond(tab-port) {
+    font-size: 3rem;
+  }
+}
+
+footer .footer-h2 span {
+  color: #f14a60;
+}
+
+.textbox h2 {
+  font-size: 3em;
+  margin-bottom: 1.4rem;
+}
+
+.textbox p {
+  margin-bottom: 1.4rem;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 48px;
+  color: #777;
+}
