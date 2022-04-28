@@ -1,4 +1,54 @@
 "use strict";
+window.onscroll = function () {
+  myFunction();
+};
+
+let navbar = document.querySelector(".navbar");
+let sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky");
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+ScrollReveal({
+  reset: true,
+  distance: "60px",
+  duration: 2500,
+  delay: 400,
+});
+
+ScrollReveal().reveal(".textbox-h2 .features - h2 .testimonial - h2", {
+  delay: 500,
+  origin: "left",
+});
+ScrollReveal().reveal(".hero-sec,.imgBox,.features,.features-img", {
+  delay: 600,
+  origin: "bottom",
+});
+// ScrollReveal().reveal(".text-box", { delay: 700, origin: "right" });
+
+function imgSlider(anything) {
+  document.querySelector(".bg-img-1").src = anything;
+}
+function changebgColor(color) {
+  const header = document.querySelector(".hero-sec");
+  header.style.background = color;
+}
+function changeColor(colors) {
+  const body = document.querySelector("body");
+  body.style.color = colors;
+}
+
+function menuToggle() {
+  const toggleMenu = document.querySelector(".toggleMenu");
+  const links = document.querySelector(".links");
+  toggleMenu.classList.toggle("active");
+  links.classList.toggle("active");
+}
 
 let testimonial = document.getElementById("testimonial"),
   testimDots = Array.prototype.slice.call(

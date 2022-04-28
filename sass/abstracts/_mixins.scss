@@ -83,4 +83,11 @@ $breakpoint argument choices:
       @content;
     }
   }
+
+  //2000px
+  @if ($breakpoint == bigger-desktop) {
+    @media only screen and (min-width: 2000px) {
+      @content;
+    }
+  }
 }
