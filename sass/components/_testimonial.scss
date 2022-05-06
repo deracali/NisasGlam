@@ -18,8 +18,8 @@
   padding: 5px;
   z-index: 22222222;
 
-  @include respond(phone-medium){
-     font-size: 1.5rem;
+  @include respond(phone-medium) {
+    font-size: 1.5rem;
   }
 }
 
@@ -29,10 +29,19 @@
 
 .testimonial-section .arrow.left {
   left: 10px;
+
+  @include respond(phone-medium) {
+    top: 62%;
+    color: #ea830e;
+  }
 }
 
 .testimonial-section .arrow.right {
   right: 10px;
+  @include respond(phone-medium) {
+    top: 62%;
+    color: #ea830e;
+  }
 }
 .testimonial-section .arrow:hover {
   color: #ea830e;

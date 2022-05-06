@@ -14,23 +14,6 @@ function myFunction() {
   }
 }
 
-ScrollReveal({
-  reset: true,
-  distance: "60px",
-  duration: 2500,
-  delay: 400,
-});
-
-ScrollReveal().reveal(".textbox-h2 .features - h2 .testimonial - h2", {
-  delay: 500,
-  origin: "left",
-});
-ScrollReveal().reveal(".hero-sec,.imgBox,.features,.features-img", {
-  delay: 600,
-  origin: "bottom",
-});
-// ScrollReveal().reveal(".text-box", { delay: 700, origin: "right" });
-
 function imgSlider(anything) {
   document.querySelector(".bg-img-1").src = anything;
 }
@@ -86,11 +69,11 @@ window.onload = function () {
 
     CurrentActive = CurrentSlide;
 
-    clearTimeout(testimTimer);
-
-    testimTimer = setTimeout(function () {
-      playSlide((CurrentSlide += 1));
-    }, testimSpeed);
+    //     clearTimeout(testimTimer);
+    //
+    //     testimTimer = setTimeout(function () {
+    //       playSlide((CurrentSlide += 1));
+    //     }, testimSpeed);
   }
 
   testimLeftArrow.addEventListener("click", function () {

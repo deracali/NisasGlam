@@ -2,7 +2,6 @@
   position: relative;
   max-width: 600px;
   transform: translateY(-20%);
-  animation: right 3s ease-in;
 
   @include respond(tab) {
     transform: translateY(-12%);
@@ -14,36 +13,40 @@
     padding-right: 20px;
   }
 
+  @include respond(tab-view) {
+    transform: translateY(-24%);
+  }
+
   @include respond(phone) {
     text-align: center;
-    transform: translateY(-7%);
+    transform: translateY(-21%);
   }
   @include respond(phone-vp) {
-    transform: translateY(-1%);
+    transform: translateY(-16%);
+  }
+  @include respond(phone-vp-small) {
+    transform: translateY(-4%);
   }
 }
 
 .content .textbox p {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   width: 100%;
-  max-width: 550px;
+  max-width: 100%;
   line-height: 1.6;
 
   @include respond(tab-land) {
     font-size: 1.2rem;
-    max-width: 587px;
   }
 
   @include respond(tab-port) {
     margin-bottom: 1.4rem;
-    font-size: 1.4rem;
+    font-size: 1.23em;
   }
 
-  @include respond(phone) {
-    max-width: 100%;
-  }
-  @include respond(phone-vp) {
-    font-size: 1.2rem;
+  @include respond(phone-medium) {
+    font-size: 1.1rem;
+    line-height: 1.43;
   }
 }
 
@@ -55,20 +58,6 @@
   @include respond(tab-port) {
     font-size: 3em;
     margin-bottom: 1.4rem;
-  }
-}
-
-@keyframes right {
-  0% {
-    transform: translate(0);
-  }
-  50% {
-    opacity: 0;
-    transform: translate(-50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0);
   }
 }
 
@@ -94,7 +83,7 @@
 .features p {
   width: 100%;
   max-width: 285px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.4;
   color: gray;
 }
@@ -103,7 +92,8 @@
   text-align: center;
   font-size: 4rem;
   color: gray;
-  margin-bottom: 2rem;
+  // margin-bottom: 2rem;
+  margin-top: 30px;
 
   @include respond(phone-vp) {
     font-size: 3rem;
@@ -132,8 +122,12 @@
 }
 
 .footer-text {
-  width: 100%;
-  max-width: 400px;
+  // width: 100%;
+  // max-width: 400px;
+
+  @include respond(phone-medium) {
+    margin-bottom: 2.4rem;
+  }
 }
 
 footer .footer-h2 {

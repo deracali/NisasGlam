@@ -3,21 +3,22 @@
 }
 
 .container {
-  width: 360px;
+  width: 367px;
   height: 400px;
   margin: 8% auto;
-  background: #fff;
   border-radius: 5px;
   position: relative;
   overflow: hidden;
 }
 
 .container form {
-  width: 280px;
+  width: 369px;
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 30px;
+  left: -2px;
   transition: 0.5s;
+  padding: 33px;
+  background: #fff;
 }
 
 form input {
@@ -45,4 +46,71 @@ form button {
   outline: none;
   color: #fff;
   cursor: pointer;
+}
+
+// success-box
+
+.success-body {
+  background-color: pink;
+}
+.successful-box {
+  width: 367px;
+  height: 400px;
+  margin: 8% auto;
+  background: #fff;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.successful-wrap {
+  text-align: center;
+  display: grid;
+  place-content: center;
+  padding: 40px;
+}
+
+.successful-box h2 {
+  text-align: center;
+  margin-bottom: 48px;
+  color: #777;
+}
+
+.success-text {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.successful-box .success {
+  width: 70%;
+  height: 35px;
+  background-color: #000;
+  border-radius: 30px;
+  border: 0;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  list-style: none;
+}
+
+.circle {
+  width: 65px;
+  height: 66px;
+  background: green;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  margin-left: 38%;
+  margin-top: -36px;
+  margin-bottom: 30px;
+  font-weight: bold;
 }

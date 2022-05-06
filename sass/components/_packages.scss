@@ -1,5 +1,5 @@
 .body {
-  background: #f7f2f3;
+ background: #f7f4f4;
   margin-top: -30px;
 }
 
@@ -37,6 +37,9 @@
 .packages-text-box {
   @include respond(phone-medium) {
     margin-left: 20px;
+  }
+  @include respond(phone-vp) {
+    line-height: 1.6;
   }
 }
 

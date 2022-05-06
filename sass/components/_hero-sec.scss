@@ -64,6 +64,24 @@
     justify-content: center;
     padding-bottom: 140px;
   }
+
+  @include respond(tab-view) {
+    margin-top: 0px;
+    padding-bottom: 70px;
+  }
+
+  @include respond(phone) {
+    margin-top: -22px;
+    padding-bottom: 78px;
+  }
+
+  @include respond(phone-vp) {
+    margin-top: -33px;
+    padding-bottom: 93px;
+  }
+  @include respond(phone-vp-small) {
+    margin-top: 22px;
+  }
 }
 
 .content .bg-img-1 {
@@ -71,6 +89,10 @@
   max-width: 600px;
   margin-right: -135px;
   border-radius: 10px;
+
+  @include respond(tab-land) {
+    max-width: 100%;
+  }
 
   @include respond(tab-port) {
     margin-right: 0;
@@ -94,10 +116,15 @@
   transition: 0.5s;
 }
 
-.thumb li:hover {
-  transform: translateY(-15px);
-}
+// .thumb li:hover {
+//   transform: translateY(-15px);
+// }
 
 .thumb li img {
   max-width: 40px;
+  transition: 0.5s ease-out;
+}
+
+.thumb li img:hover {
+  transform: scale(2.2);
 }

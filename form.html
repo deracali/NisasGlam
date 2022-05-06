@@ -37,38 +37,55 @@
       </div>
     </div>
     <div class="container">
-      <form id="form1" onsubmit="sendEmail(); reset();">
+      <div id="error"></div>
+      <form id="form" name="section" method="post" data-netlify="true" onsubmit="submit" data-netlify-honeypot="bot-field" action="/success.html/">
         <h3>BOOK A SECTION</h3>
+
+        <input class="hidden" name="bot-field">
         <input
           type="text"
           placeholder="Full Name"
-          required
           id="fullname"
           validate
-        />
-        <input
-          type="text"
-          placeholder="Mobile No."
+          name="name"
           required
+        />
+
+        <input
+          type="tel"
+          placeholder="Mobile No."
           id="mobile"
           validate
+          name="tel"
+          required
         />
-        <input type="text" placeholder="Email" required id="email" validate />
+
+        <input
+          type="email"
+          placeholder="Email"
+          id="email"
+          validate
+          name="email"
+          required
+        />
+
         <input
           type="text"
           placeholder="Enter Text"
-          required
           id="text"
           validate
+          name="text"
+          required
         />
 
         <div class="btn-box">
           <a href="/index.html"><button type="button">Back</button></a>
-          <button class="send" type="button">Send</button>
+          <button class="send" name="submit">Send</button>
         </div>
       </form>
-    </div>
 
+     
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
       let preloader = document.getElementById("loading");
       function myFunction() {
@@ -76,34 +93,34 @@
           preloader.style.display = "none";
         }, 1000);
       }
+      
+      const name = document.getElementById('fullname');
+      const number = document.getElementById('mobile');
+      const form = document.getElementById('form');
+      const errorElement = document.getElementById('error');
 
-      let send = document.querySelector(".send");
+      form.addEventListener('submit',(e) => {
+        let messages = []
 
-      send.addEventListener("click", () => {
-        send.innerText = "sending...";
+        if(name.value === "" || name.value === null){
+          messages.push('Name is required')
+        }
 
-        setTimeout(function () {
-          send.style.backgroundColor = "#fff";
-          send.style.color = "#000";
-          send.style.border = "1px solid #000";
-          send.innerText = "Sent";
-        }, 1000);
-      });
-    </script>
-    <script src="https://smtpjs.com/v3/smtp.js">
-            function sendEmail(){
-              Email.send({
-          Host : "smtp.gmail.com",
-          Username : "chideracalistus@gmail.com",
-          Password : "ECONOMIC000",
-          To : 'chideracalistus00@gmail.com',
-          From : document.getElementById('email').value,
-          Subject : "New Customer",
-          Body : "And this is the body"
-      }).then(
-        message => alert(message)
-      );
-            }
+        if(number.value.length < 11){
+          messages.push('Mobile must be equal 11 characters')
+        }
+
+        if(number.value.length > 11){
+          messages.push('Mobile must be equal to 11 character')
+        }
+
+        if(messages.length > 0){
+        e.preventDefault()
+        errorElement.innerText = messages.join(', ')
+        }
+      })
+     
+
     </script>
   </body>
 </html>

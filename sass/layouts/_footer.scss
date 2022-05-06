@@ -7,7 +7,14 @@
   @include respond(tab-view) {
     flex-wrap: wrap;
     width: 80%;
-    margin: -10px 60px 60px;
+    margin: 0px 60px 60px;
+  }
+
+  @include respond(phone-vp-small) {
+    margin: 0px 42px 51px;
+  }
+  @include respond(phone-small-vp) {
+    margin: 0px 38px 51px;
   }
 }
 
@@ -27,10 +34,21 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
+
+  @include respond(phone-vp) {
+    gap: 0;
+    justify-content: space-evenly;
+    width: 50%;
+  }
 }
 
 .copyright {
-  margin-left: 43%;
+  text-align: center;
+  margin-left: 200px;
+
+  @include respond(phone) {
+    margin-left: 0;
+  }
 }
 
 footer a {

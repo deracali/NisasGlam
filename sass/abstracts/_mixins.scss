@@ -30,6 +30,18 @@ $breakpoint argument choices:
     }
   }
 
+  // 350px
+  @if ($breakpoint == phone-small-vp) {
+    @media only screen and (max-width: 350px) {
+      @content;
+    }
+  }
+  // 400px
+  @if ($breakpoint == phone-vp-small) {
+    @media only screen and (max-width: 400px) {
+      @content;
+    }
+  }
   // 450px
   @if ($breakpoint == phone-vp) {
     @media only screen and (max-width: 450px) {
